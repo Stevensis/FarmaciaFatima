@@ -18,3 +18,11 @@ AS
 UPDATE B set B.cantidad = B.cantidad - D.restado 
 from bodega B
 INNER JOIN inserted D ON (D.idBodega=B.IdBodega)
+
+CREATE TRIGGER  sumarInventario
+on DetalleVenta
+AFTER DELETE 
+AS 
+UPDATE B set B.cantidad = B.cantidad + D.restado 
+from bodega B
+INNER JOIN DELETED D ON (D.idBodega=B.IdBodega)

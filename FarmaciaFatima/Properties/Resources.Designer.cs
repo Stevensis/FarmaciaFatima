@@ -63,6 +63,16 @@ namespace FarmaciaFatima.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _201706357__2_ {
+            get {
+                object obj = ResourceManager.GetObject("201706357 (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap abrir_caja {
             get {
                 object obj = ResourceManager.GetObject("abrir-caja", resourceCulture);
@@ -193,6 +203,16 @@ namespace FarmaciaFatima.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap editar {
+            get {
+                object obj = ResourceManager.GetObject("editar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap grafico {
             get {
                 object obj = ResourceManager.GetObject("grafico", resourceCulture);
@@ -296,6 +316,16 @@ namespace FarmaciaFatima.Properties {
         internal static System.Drawing.Bitmap minimizar {
             get {
                 object obj = ResourceManager.GetObject("minimizar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap productos_farmacia_1_1080x675 {
+            get {
+                object obj = ResourceManager.GetObject("productos-farmacia-1-1080x675", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

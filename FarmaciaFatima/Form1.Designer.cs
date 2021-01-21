@@ -30,10 +30,10 @@ namespace FarmaciaFatima
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            BunifuAnimatorNS.Animation animation3 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.MenuTop = new System.Windows.Forms.Panel();
             this.restaurar = new System.Windows.Forms.PictureBox();
@@ -71,6 +71,7 @@ namespace FarmaciaFatima
             this.metroContextMenu2 = new MetroFramework.Controls.MetroContextMenu(this.components);
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.OpenFile = new System.Windows.Forms.OpenFileDialog();
+            this.label5 = new System.Windows.Forms.Label();
             this.MenuTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.restaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Minimizar)).BeginInit();
@@ -103,7 +104,7 @@ namespace FarmaciaFatima
             this.MenuTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.MenuTop.Location = new System.Drawing.Point(0, 0);
             this.MenuTop.Name = "MenuTop";
-            this.MenuTop.Size = new System.Drawing.Size(1603, 80);
+            this.MenuTop.Size = new System.Drawing.Size(1879, 80);
             this.MenuTop.TabIndex = 0;
             // 
             // restaurar
@@ -111,7 +112,7 @@ namespace FarmaciaFatima
             this.restaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.AnimacionSidebarBack.SetDecoration(this.restaurar, BunifuAnimatorNS.DecorationType.None);
             this.restaurar.Image = global::FarmaciaFatima.Properties.Resources.restaurar;
-            this.restaurar.Location = new System.Drawing.Point(1525, 26);
+            this.restaurar.Location = new System.Drawing.Point(1801, 26);
             this.restaurar.Name = "restaurar";
             this.restaurar.Size = new System.Drawing.Size(30, 30);
             this.restaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -125,7 +126,7 @@ namespace FarmaciaFatima
             this.Minimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.AnimacionSidebarBack.SetDecoration(this.Minimizar, BunifuAnimatorNS.DecorationType.None);
             this.Minimizar.Image = global::FarmaciaFatima.Properties.Resources.minimizar;
-            this.Minimizar.Location = new System.Drawing.Point(1489, 26);
+            this.Minimizar.Location = new System.Drawing.Point(1765, 26);
             this.Minimizar.Name = "Minimizar";
             this.Minimizar.Size = new System.Drawing.Size(30, 30);
             this.Minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -138,7 +139,7 @@ namespace FarmaciaFatima
             this.Maximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.AnimacionSidebarBack.SetDecoration(this.Maximizar, BunifuAnimatorNS.DecorationType.None);
             this.Maximizar.Image = global::FarmaciaFatima.Properties.Resources.maximizar;
-            this.Maximizar.Location = new System.Drawing.Point(1525, 26);
+            this.Maximizar.Location = new System.Drawing.Point(1801, 26);
             this.Maximizar.Name = "Maximizar";
             this.Maximizar.Size = new System.Drawing.Size(30, 30);
             this.Maximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -151,7 +152,7 @@ namespace FarmaciaFatima
             this.Salir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.AnimacionSidebarBack.SetDecoration(this.Salir, BunifuAnimatorNS.DecorationType.None);
             this.Salir.Image = global::FarmaciaFatima.Properties.Resources.cerrar;
-            this.Salir.Location = new System.Drawing.Point(1561, 26);
+            this.Salir.Location = new System.Drawing.Point(1837, 26);
             this.Salir.Name = "Salir";
             this.Salir.Size = new System.Drawing.Size(30, 30);
             this.Salir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -297,7 +298,7 @@ namespace FarmaciaFatima
             this.Wrapper.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Wrapper.Location = new System.Drawing.Point(240, 80);
             this.Wrapper.Name = "Wrapper";
-            this.Wrapper.Size = new System.Drawing.Size(1363, 1022);
+            this.Wrapper.Size = new System.Drawing.Size(1639, 1022);
             this.Wrapper.TabIndex = 2;
             // 
             // metroTabControl1
@@ -308,7 +309,7 @@ namespace FarmaciaFatima
             this.metroTabControl1.Location = new System.Drawing.Point(0, 0);
             this.metroTabControl1.Name = "metroTabControl1";
             this.metroTabControl1.SelectedIndex = 0;
-            this.metroTabControl1.Size = new System.Drawing.Size(1363, 1022);
+            this.metroTabControl1.Size = new System.Drawing.Size(1639, 1022);
             this.metroTabControl1.TabIndex = 0;
             this.metroTabControl1.UseSelectable = true;
             // 
@@ -325,7 +326,7 @@ namespace FarmaciaFatima
             this.txtBusqueda.HorizontalScrollbarSize = 10;
             this.txtBusqueda.Location = new System.Drawing.Point(4, 38);
             this.txtBusqueda.Name = "txtBusqueda";
-            this.txtBusqueda.Size = new System.Drawing.Size(1355, 980);
+            this.txtBusqueda.Size = new System.Drawing.Size(1631, 980);
             this.txtBusqueda.TabIndex = 0;
             this.txtBusqueda.Text = "Cliente 1";
             this.txtBusqueda.VerticalScrollbarBarColor = true;
@@ -339,10 +340,10 @@ namespace FarmaciaFatima
             this.panelCarrito.Controls.Add(this.panel4);
             this.AnimacionSidebarBack.SetDecoration(this.panelCarrito, BunifuAnimatorNS.DecorationType.None);
             this.panelCarrito.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelCarrito.Location = new System.Drawing.Point(0, 330);
+            this.panelCarrito.Location = new System.Drawing.Point(0, 282);
             this.panelCarrito.Name = "panelCarrito";
-            this.panelCarrito.Size = new System.Drawing.Size(1355, 650);
-            this.panelCarrito.TabIndex = 5;
+            this.panelCarrito.Size = new System.Drawing.Size(1631, 698);
+            this.panelCarrito.TabIndex = 10;
             // 
             // panelCa
             // 
@@ -351,9 +352,8 @@ namespace FarmaciaFatima
             this.panelCa.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelCa.Location = new System.Drawing.Point(0, 0);
             this.panelCa.Name = "panelCa";
-            this.panelCa.Size = new System.Drawing.Size(1355, 558);
+            this.panelCa.Size = new System.Drawing.Size(1631, 606);
             this.panelCa.TabIndex = 23;
-            this.panelCa.Paint += new System.Windows.Forms.PaintEventHandler(this.panelCa_Paint);
             // 
             // panel4
             // 
@@ -363,9 +363,9 @@ namespace FarmaciaFatima
             this.panel4.Controls.Add(this.label3);
             this.AnimacionSidebarBack.SetDecoration(this.panel4, BunifuAnimatorNS.DecorationType.None);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 558);
+            this.panel4.Location = new System.Drawing.Point(0, 606);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1355, 92);
+            this.panel4.Size = new System.Drawing.Size(1631, 92);
             this.panel4.TabIndex = 20;
             // 
             // button1
@@ -431,14 +431,15 @@ namespace FarmaciaFatima
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label2);
             this.AnimacionSidebarBack.SetDecoration(this.panel2, BunifuAnimatorNS.DecorationType.None);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 307);
+            this.panel2.Location = new System.Drawing.Point(0, 259);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1355, 23);
-            this.panel2.TabIndex = 4;
+            this.panel2.Size = new System.Drawing.Size(1631, 23);
+            this.panel2.TabIndex = 9;
             // 
             // label4
             // 
@@ -447,9 +448,9 @@ namespace FarmaciaFatima
             this.label4.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(984, -1);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(105, 23);
+            this.label4.Size = new System.Drawing.Size(108, 23);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Cantidad";
+            this.label4.Text = "Unidades";
             // 
             // label2
             // 
@@ -466,31 +467,31 @@ namespace FarmaciaFatima
             // 
             this.gridProductos.AllowUserToAddRows = false;
             this.gridProductos.AllowUserToDeleteRows = false;
+            this.gridProductos.AllowUserToOrderColumns = true;
             this.gridProductos.AllowUserToResizeRows = false;
             this.gridProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.gridProductos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.gridProductos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.gridProductos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridProductos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.gridProductos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.gridProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.AnimacionSidebarBack.SetDecoration(this.gridProductos, BunifuAnimatorNS.DecorationType.None);
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridProductos.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridProductos.DefaultCellStyle = dataGridViewCellStyle8;
             this.gridProductos.Dock = System.Windows.Forms.DockStyle.Top;
             this.gridProductos.EnableHeadersVisualStyles = false;
             this.gridProductos.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -499,21 +500,21 @@ namespace FarmaciaFatima
             this.gridProductos.Name = "gridProductos";
             this.gridProductos.ReadOnly = true;
             this.gridProductos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridProductos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridProductos.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.gridProductos.RowHeadersWidth = 51;
             this.gridProductos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.gridProductos.RowTemplate.Height = 24;
             this.gridProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridProductos.Size = new System.Drawing.Size(1355, 254);
+            this.gridProductos.Size = new System.Drawing.Size(1631, 206);
             this.gridProductos.TabIndex = 3;
-            this.gridProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridProductos_CellClick);
+            this.gridProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridProductos_CellClick);
             // 
             // panel1
             // 
@@ -523,7 +524,7 @@ namespace FarmaciaFatima
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1355, 53);
+            this.panel1.Size = new System.Drawing.Size(1631, 53);
             this.panel1.TabIndex = 2;
             // 
             // btnBuscar
@@ -533,7 +534,7 @@ namespace FarmaciaFatima
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
             this.btnBuscar.Image = global::FarmaciaFatima.Properties.Resources.buscar__2_;
-            this.btnBuscar.Location = new System.Drawing.Point(624, 3);
+            this.btnBuscar.Location = new System.Drawing.Point(900, 3);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(102, 50);
             this.btnBuscar.TabIndex = 1;
@@ -549,7 +550,7 @@ namespace FarmaciaFatima
             this.textBox1.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(3, 5);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(615, 38);
+            this.textBox1.Size = new System.Drawing.Size(891, 38);
             this.textBox1.TabIndex = 0;
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
@@ -558,22 +559,22 @@ namespace FarmaciaFatima
             // 
             this.AnimacionSidebarBack.AnimationType = BunifuAnimatorNS.AnimationType.HorizBlind;
             this.AnimacionSidebarBack.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.AnimacionSidebarBack.DefaultAnimation = animation1;
+            animation3.AnimateOnlyDifferences = true;
+            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
+            animation3.LeafCoeff = 0F;
+            animation3.MaxTime = 1F;
+            animation3.MinTime = 0F;
+            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
+            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
+            animation3.MosaicSize = 0;
+            animation3.Padding = new System.Windows.Forms.Padding(0);
+            animation3.RotateCoeff = 0F;
+            animation3.RotateLimit = 0F;
+            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
+            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
+            animation3.TimeCoeff = 0F;
+            animation3.TransparencyCoeff = 0F;
+            this.AnimacionSidebarBack.DefaultAnimation = animation3;
             // 
             // metroContextMenu1
             // 
@@ -602,11 +603,22 @@ namespace FarmaciaFatima
             this.OpenFile.Filter = "Archivos ER (*.CSV)|*.CSV";
             this.OpenFile.Title = "Archivo a Analizar";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.AnimacionSidebarBack.SetDecoration(this.label5, BunifuAnimatorNS.DecorationType.None);
+            this.label5.Font = new System.Drawing.Font("Lucida Sans Unicode", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(1216, 3);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(214, 17);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Nuevo precio /Descripcion";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1603, 1102);
+            this.ClientSize = new System.Drawing.Size(1879, 1102);
             this.Controls.Add(this.Wrapper);
             this.Controls.Add(this.SideBarWrapper);
             this.Controls.Add(this.MenuTop);
@@ -665,19 +677,20 @@ namespace FarmaciaFatima
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnBodega;
-        private MetroFramework.Controls.MetroGrid gridProductos;
         private MetroFramework.Controls.MetroContextMenu metroContextMenu2;
+        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Panel panelCarrito;
         private System.Windows.Forms.Panel panelCa;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtNombreProducto;
         private System.Windows.Forms.Button btnVender;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button4;
+        private MetroFramework.Controls.MetroGrid gridProductos;
+        private System.Windows.Forms.Label label5;
     }
 }
 

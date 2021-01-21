@@ -29,12 +29,12 @@ namespace FarmaciaFatima.Procesos
         public string primeraParte = " " +
         " <br> " +
         " <br> " +
-        " <div class=\"col-md-4\"> " +
+        " <div class=\"col-md-3\"> " +
         "	<h7> ";
 
         public string segundaParte = "</h7> " ;
 
-        public string segundaParte2 = " </div> "+ " <div class=\"col-md-4\">" +
+        public string segundaParte2 = " </div> "+ " <div class=\"col-md-6\">" +
          "	<table class=\"table\"> " +
          " <thead> " +
          "	<tr> ";
@@ -50,7 +50,7 @@ namespace FarmaciaFatima.Procesos
         " </table> ";
         
         public string quintaParte = " </div > " +
-        " <div class=\"col-md-4\"> " +
+        " <div class=\"col-md-3\"> " +
         " </div> " +
         " </div> ";
 

@@ -24,8 +24,8 @@ namespace FarmaciaFatima
             SideBarWrapper.Width = 202;
             bunifuSeparator1.Width = 202;
             btnAbrir.Width = 202;
-            metroTabControl1.TabPages.Add(new TabPage("Cliente2"));
             lstVentas = new List<venta>();
+            label5.Visible = false;
             contadorY += 27;
             IniciarDatos();
         }
@@ -140,7 +140,6 @@ namespace FarmaciaFatima
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             MostrarProductos();
-            MessageBox.Show(DateTime.Now.Date.ToString("dd-MM-yyyy") + " -- "+ DateTime.Now.ToString("hh:mm:ss"));
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
@@ -159,26 +158,26 @@ namespace FarmaciaFatima
                 consulta = " (SELECT T.idBodega AS Codigo, P.nombre AS Producto, PR.nombre AS Presentacion, C.nombre AS Casa_Medica, T.precio AS Q_Precio, P.descripcion, T.cantidad AS Disponible, T.fechaCaducidad, T.tipo, C.nombre AS Representa FROM bodega T "
                                 + " INNER JOIN producto P on(P.idProducto = T.idProducto) "
                                 + " INNER JOIN casaMedica C on(C.idCasaMedica = T.idCasaMedica)" +
-                                  " INNER JOIN presentacion PR ON (PR.IdPresentacion = T.idPresentacion) ) " +
+                                  " INNER JOIN presentacion PR ON (PR.IdPresentacion = T.idPresentacion) WHERE T.estado=1 )  " +
                                   " UNION ALL " +
                                   " ( SELECT B.IdBodega, PR.nombre, PS.nombre,C.nombre, PP.precio,PR.descripcion, (B.cantidad/PP.representacion) AS Cantidad, B.fechaCaducidad, B.tipo, STR(PP.representacion)  from PresedenciaProducto PP " +
                                   "  INNER JOIN bodega B ON(B.idBodega = PP.idBodega) "+
                                   "  INNER JOIN presentacion PS ON(PS.idPresentacion = PP.idPresedencia) "+
                                   "  INNER JOIN producto PR ON(PR.idProducto = B.idProducto) "+
-                                  "  INNER JOIN casaMedica C ON(C.idCasaMedica = B.idCasaMedica) )";
+                                  "  INNER JOIN casaMedica C ON(C.idCasaMedica = B.idCasaMedica) WHERE B.estado=1  )";
             }else {
                 consulta = "(SELECT T.idBodega AS Codigo, P.nombre AS Producto, PR.nombre AS Presentacion,C.nombre AS Casa_Medica, T.precio AS Q_Precio, P.descripcion, T.cantidad AS Disponible, T.fechaCaducidad, T.tipo, C.nombre AS Representa FROM bodega T "
                                 + " INNER JOIN producto P on(P.idProducto = T.idProducto) "
                                 + " INNER JOIN casaMedica C on(C.idCasaMedica = T.idCasaMedica) " +
                                 " INNER JOIN presentacion PR ON (PR.IdPresentacion = T.idPresentacion) " +
-                                " WHERE P.nombre Like '%" + textBox1.Text + "%' OR P.descripcion Like '%" + textBox1.Text + "%' )  " +
+                                " WHERE (P.nombre Like '%" + textBox1.Text + "%' OR P.descripcion Like '%" + textBox1.Text + "%' ) AND T.estado=1  )  " +
                                 " UNION ALL " +
                                   " ( SELECT B.IdBodega, PR.nombre, PS.nombre,C.nombre, PP.precio,PR.descripcion, (B.cantidad/PP.representacion), B.fechaCaducidad, B.tipo, STR(PP.representacion) from PresedenciaProducto PP  " +
                                   "  INNER JOIN bodega B ON(B.idBodega = PP.idBodega) " +
                                   "  INNER JOIN presentacion PS ON(PS.idPresentacion = PP.idPresedencia) " +
                                   "  INNER JOIN producto PR ON(PR.idProducto = B.idProducto) " +
                                   "  INNER JOIN casaMedica C ON(C.idCasaMedica = B.idCasaMedica) " +
-                                  " WHERE PR.nombre Like '%" + textBox1.Text + "%' OR PR.descripcion Like '%" + textBox1.Text + "%' ) ";
+                                  " WHERE (PR.nombre Like '%" + textBox1.Text + "%' OR PR.descripcion Like '%" + textBox1.Text + "%') AND B.estado=1 ) ";
             }
             
             DataTable tabla = conexion.retornaTabla(consulta);
@@ -212,16 +211,36 @@ namespace FarmaciaFatima
         private void gridProductos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (this.gridProductos.Columns.Count==0 || this.gridProductos.Rows.Count==0) { return; }
-            if (this.gridProductos.Columns[e.ColumnIndex].Name == "Agregar")
+            try
             {
-               if (yaEstaenelcarrito(gridProductos.CurrentRow.Cells[2].Value.ToString(), gridProductos.CurrentRow.Cells[11].Value.ToString(), gridProductos.CurrentRow.Cells[5].Value.ToString(), gridProductos.CurrentRow.Cells[10].Value.ToString())) 
-                { MessageBox.Show("Este Producto ya esta en el carrito de compra"); return; }
+                if (this.gridProductos.Columns[e.ColumnIndex].Name == "Agregar")
+                {
+                    if (float.Parse(gridProductos.CurrentRow.Cells[6].Value.ToString()) <= 0)
+                    {
+                        MessageBox.Show("No se puede vender un producto sin precio"); return;
+                    }
 
-                string contenidoV = gridProductos.CurrentRow.Cells[3].Value.ToString() + " " + gridProductos.CurrentRow.Cells[5].Value.ToString() + " / "+ gridProductos.CurrentRow.Cells[4].Value.ToString();
-                lstVentas.Add(new venta(gridProductos.CurrentRow.Cells[2].Value.ToString(), this.panelCa, contadorY, gridProductos.CurrentRow.Cells[3].Value.ToString(), gridProductos.CurrentRow.Cells[4].Value.ToString(), gridProductos.CurrentRow.Cells[5].Value.ToString(), gridProductos.CurrentRow.Cells[8].Value.ToString(), gridProductos.CurrentRow.Cells[6].Value.ToString(), lstVentas, gridProductos.CurrentRow.Cells[10].Value.ToString(), gridProductos.CurrentRow.Cells[11].Value.ToString()));
-                contadorY += 27;
+                    if (yaEstaenelcarrito(gridProductos.CurrentRow.Cells[2].Value.ToString(), gridProductos.CurrentRow.Cells[11].Value.ToString(), gridProductos.CurrentRow.Cells[5].Value.ToString(), gridProductos.CurrentRow.Cells[10].Value.ToString()))
+                    { MessageBox.Show("Este Producto ya esta en el carrito de compra"); return; }
 
+                    string contenidoV = gridProductos.CurrentRow.Cells[3].Value.ToString() + " " + gridProductos.CurrentRow.Cells[5].Value.ToString() + " / " + gridProductos.CurrentRow.Cells[4].Value.ToString();
+                    lstVentas.Add(new venta(gridProductos.CurrentRow.Cells[2].Value.ToString(), this.panelCa, contadorY, gridProductos.CurrentRow.Cells[3].Value.ToString(), gridProductos.CurrentRow.Cells[4].Value.ToString(), gridProductos.CurrentRow.Cells[5].Value.ToString(), gridProductos.CurrentRow.Cells[8].Value.ToString(), gridProductos.CurrentRow.Cells[6].Value.ToString(), lstVentas, gridProductos.CurrentRow.Cells[10].Value.ToString(), gridProductos.CurrentRow.Cells[11].Value.ToString(), label5));
+                    contadorY += 27;
+
+                }
+
+                if (this.gridProductos.Columns[e.ColumnIndex].Name == "Detalle")
+                {
+                    VerProducto verProducto = new VerProducto();
+                    verProducto.ponerFoto(gridProductos.CurrentRow.Cells[2].Value.ToString());
+                }
             }
+            catch (Exception)
+            {
+
+                MessageBox.Show("No se pudo agregar");
+            }
+            
         }
 
         public bool yaEstaenelcarrito(string id, string representa, string casaM, string tipoO) {
@@ -271,6 +290,7 @@ namespace FarmaciaFatima
 
             foreach (var sePuedeV in lstVentas)
             {
+                sePuedeV.actualizarPrecio();
                 try
                 {
                     sePuedeV.Vsubtotal = (float.Parse(sePuedeV.precio) * float.Parse(sePuedeV.cantidad.Text));
@@ -291,13 +311,13 @@ namespace FarmaciaFatima
         public void IniciarDatos() {
             if (!existeDato("SELECT * FROM presentacion WHERE nombre='000Seleccione'")) {
                 Conexion conexion = new Conexion();
-                string consulta = "INSERT INTO presentacion (nombre) VALUES ('000Seleccione')";
+                string consulta = "INSERT INTO presentacion (nombre) VALUES (' 000Seleccione')";
                 conexion.cargaMasiva(consulta);
             }
             if (!existeDato("SELECT * FROM casaMedica WHERE nombre='000Seleccione'"))
             {
                 Conexion conexion = new Conexion();
-                string consulta = "INSERT INTO casaMedica (nombre) VALUES ('000Seleccione')";
+                string consulta = "INSERT INTO casaMedica (nombre) VALUES (' 000Seleccione')";
                 conexion.cargaMasiva(consulta);
             }
 

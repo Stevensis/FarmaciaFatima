@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.Linq;
 using System.Data.SqlClient;
-using System.Data; 
+using System.Data;
+using System.Windows.Forms;
 
 namespace FarmaciaFatima
 {
     class Conexion
     {
-        string connexion = Properties.Settings.Default.Conectar;
+        string connexion = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Database1.mdf;Integrated Security=True;Connect Timeout=30";
         DataTable dt = new DataTable();
         public DataTable prueba() {
             try
@@ -30,6 +31,7 @@ namespace FarmaciaFatima
             catch (Exception)
             {
                 Console.WriteLine("Hubo un error en la conexion");
+                MessageBox.Show("Este proceso no se pudo realizar, verifique los datos");
             }
             return null;
         }
@@ -51,6 +53,7 @@ namespace FarmaciaFatima
             catch (Exception)
             {
                 Console.WriteLine("Hubo un error en la cargamasiva");
+                MessageBox.Show("Este proceso no se pudo realizar, verifique los datos");
                 return false;
             }
             return false;

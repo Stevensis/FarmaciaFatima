@@ -30,13 +30,20 @@ namespace FarmaciaFatima.Ventanas
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.MenuTop = new System.Windows.Forms.Panel();
+            this.restaurar = new System.Windows.Forms.PictureBox();
+            this.Minimizar = new System.Windows.Forms.PictureBox();
+            this.Maximizar = new System.Windows.Forms.PictureBox();
+            this.Salir = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
@@ -45,13 +52,20 @@ namespace FarmaciaFatima.Ventanas
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.checkPresedencia = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtPrecedenciaM = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.richDescripcion = new System.Windows.Forms.RichTextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnAbrir = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtNombreProducto = new System.Windows.Forms.TextBox();
             this.cbxCasaMedica = new System.Windows.Forms.ComboBox();
@@ -60,26 +74,37 @@ namespace FarmaciaFatima.Ventanas
             this.panel5 = new System.Windows.Forms.Panel();
             this.gridPresentacion = new MetroFramework.Controls.MetroGrid();
             this.gridCasaMedica = new MetroFramework.Controls.MetroGrid();
+            this.btnAniadirPre = new System.Windows.Forms.Button();
+            this.btnAniadirCM = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.txtPresentacion = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtCasaMedica = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.btnAbrir = new System.Windows.Forms.Button();
-            this.btnAniadirPre = new System.Windows.Forms.Button();
-            this.btnAniadirCM = new System.Windows.Forms.Button();
-            this.restaurar = new System.Windows.Forms.PictureBox();
-            this.Minimizar = new System.Windows.Forms.PictureBox();
-            this.Maximizar = new System.Windows.Forms.PictureBox();
-            this.Salir = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.richDescripcion = new System.Windows.Forms.RichTextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label6 = new System.Windows.Forms.Label();
+            this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.gridProductos = new MetroFramework.Controls.MetroGrid();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.cbxPresentacion2 = new System.Windows.Forms.ComboBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.cbxCasaMedica2 = new System.Windows.Forms.ComboBox();
+            this.button5 = new System.Windows.Forms.Button();
             this.MenuTop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.restaurar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Minimizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Maximizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Salir)).BeginInit();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -90,15 +115,17 @@ namespace FarmaciaFatima.Ventanas
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridPresentacion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridCasaMedica)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.restaurar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Minimizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Maximizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Salir)).BeginInit();
+            this.metroTabPage3.SuspendLayout();
+            this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridProductos)).BeginInit();
+            this.panel9.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // MenuTop
             // 
             this.MenuTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(136)))), ((int)(((byte)(127)))));
+            this.MenuTop.Controls.Add(this.button5);
             this.MenuTop.Controls.Add(this.restaurar);
             this.MenuTop.Controls.Add(this.Minimizar);
             this.MenuTop.Controls.Add(this.Maximizar);
@@ -109,6 +136,55 @@ namespace FarmaciaFatima.Ventanas
             this.MenuTop.Name = "MenuTop";
             this.MenuTop.Size = new System.Drawing.Size(1245, 80);
             this.MenuTop.TabIndex = 1;
+            // 
+            // restaurar
+            // 
+            this.restaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.restaurar.Image = global::FarmaciaFatima.Properties.Resources.restaurar;
+            this.restaurar.Location = new System.Drawing.Point(1167, 26);
+            this.restaurar.Name = "restaurar";
+            this.restaurar.Size = new System.Drawing.Size(30, 30);
+            this.restaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.restaurar.TabIndex = 5;
+            this.restaurar.TabStop = false;
+            this.restaurar.Visible = false;
+            this.restaurar.Click += new System.EventHandler(this.restaurar_Click);
+            // 
+            // Minimizar
+            // 
+            this.Minimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Minimizar.Image = global::FarmaciaFatima.Properties.Resources.minimizar;
+            this.Minimizar.Location = new System.Drawing.Point(1131, 26);
+            this.Minimizar.Name = "Minimizar";
+            this.Minimizar.Size = new System.Drawing.Size(30, 30);
+            this.Minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Minimizar.TabIndex = 4;
+            this.Minimizar.TabStop = false;
+            this.Minimizar.Click += new System.EventHandler(this.Minimizar_Click);
+            // 
+            // Maximizar
+            // 
+            this.Maximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Maximizar.Image = global::FarmaciaFatima.Properties.Resources.maximizar;
+            this.Maximizar.Location = new System.Drawing.Point(1167, 26);
+            this.Maximizar.Name = "Maximizar";
+            this.Maximizar.Size = new System.Drawing.Size(30, 30);
+            this.Maximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Maximizar.TabIndex = 3;
+            this.Maximizar.TabStop = false;
+            this.Maximizar.Click += new System.EventHandler(this.Maximizar_Click);
+            // 
+            // Salir
+            // 
+            this.Salir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Salir.Image = global::FarmaciaFatima.Properties.Resources.cerrar;
+            this.Salir.Location = new System.Drawing.Point(1203, 26);
+            this.Salir.Name = "Salir";
+            this.Salir.Size = new System.Drawing.Size(30, 30);
+            this.Salir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Salir.TabIndex = 2;
+            this.Salir.TabStop = false;
+            this.Salir.Click += new System.EventHandler(this.Salir_Click);
             // 
             // label1
             // 
@@ -131,6 +207,7 @@ namespace FarmaciaFatima.Ventanas
             // 
             this.metroTabControl1.Controls.Add(this.metroTabPage1);
             this.metroTabControl1.Controls.Add(this.metroTabPage2);
+            this.metroTabControl1.Controls.Add(this.metroTabPage3);
             this.metroTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTabControl1.Location = new System.Drawing.Point(0, 80);
             this.metroTabControl1.Name = "metroTabControl1";
@@ -205,6 +282,18 @@ namespace FarmaciaFatima.Ventanas
             this.checkPresedencia.UseVisualStyleBackColor = true;
             this.checkPresedencia.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(184)))), ((int)(((byte)(174)))));
+            this.button1.Image = global::FarmaciaFatima.Properties.Resources.menos;
+            this.button1.Location = new System.Drawing.Point(472, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(61, 50);
+            this.button1.TabIndex = 17;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -234,6 +323,18 @@ namespace FarmaciaFatima.Ventanas
             this.label11.Size = new System.Drawing.Size(131, 23);
             this.label11.TabIndex = 14;
             this.label11.Text = "Presentacion";
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(184)))), ((int)(((byte)(174)))));
+            this.btnBuscar.Image = global::FarmaciaFatima.Properties.Resources.circulo_plus__1_;
+            this.btnBuscar.Location = new System.Drawing.Point(411, 0);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(55, 50);
+            this.btnBuscar.TabIndex = 13;
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // panel4
             // 
@@ -282,6 +383,59 @@ namespace FarmaciaFatima.Ventanas
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(415, 645);
             this.panel2.TabIndex = 13;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Lucida Sans Unicode", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(24, 378);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(216, 23);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "Fecha de Vencimiento";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(22, 404);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker1.TabIndex = 16;
+            // 
+            // richDescripcion
+            // 
+            this.richDescripcion.Location = new System.Drawing.Point(22, 246);
+            this.richDescripcion.Name = "richDescripcion";
+            this.richDescripcion.Size = new System.Drawing.Size(314, 96);
+            this.richDescripcion.TabIndex = 15;
+            this.richDescripcion.Text = "";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Lucida Sans Unicode", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(18, 203);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(121, 23);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Descripcion";
+            // 
+            // btnAbrir
+            // 
+            this.btnAbrir.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnAbrir.FlatAppearance.BorderSize = 0;
+            this.btnAbrir.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btnAbrir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAbrir.Font = new System.Drawing.Font("MV Boli", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAbrir.Image = global::FarmaciaFatima.Properties.Resources.abrir_caja;
+            this.btnAbrir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAbrir.Location = new System.Drawing.Point(22, 562);
+            this.btnAbrir.Name = "btnAbrir";
+            this.btnAbrir.Size = new System.Drawing.Size(354, 53);
+            this.btnAbrir.TabIndex = 13;
+            this.btnAbrir.Text = "Añadir Producto";
+            this.btnAbrir.UseVisualStyleBackColor = true;
+            this.btnAbrir.Click += new System.EventHandler(this.btnAbrir_Click);
             // 
             // label2
             // 
@@ -366,23 +520,23 @@ namespace FarmaciaFatima.Ventanas
             this.gridPresentacion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridPresentacion.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.gridPresentacion.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridPresentacion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridPresentacion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gridPresentacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridPresentacion.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridPresentacion.DefaultCellStyle = dataGridViewCellStyle2;
             this.gridPresentacion.EnableHeadersVisualStyles = false;
             this.gridPresentacion.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.gridPresentacion.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -390,14 +544,14 @@ namespace FarmaciaFatima.Ventanas
             this.gridPresentacion.Name = "gridPresentacion";
             this.gridPresentacion.ReadOnly = true;
             this.gridPresentacion.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridPresentacion.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridPresentacion.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.gridPresentacion.RowHeadersWidth = 51;
             this.gridPresentacion.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.gridPresentacion.RowTemplate.Height = 24;
@@ -417,23 +571,23 @@ namespace FarmaciaFatima.Ventanas
             this.gridCasaMedica.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridCasaMedica.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.gridCasaMedica.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridCasaMedica.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridCasaMedica.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.gridCasaMedica.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridCasaMedica.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridCasaMedica.DefaultCellStyle = dataGridViewCellStyle5;
             this.gridCasaMedica.EnableHeadersVisualStyles = false;
             this.gridCasaMedica.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.gridCasaMedica.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -441,20 +595,56 @@ namespace FarmaciaFatima.Ventanas
             this.gridCasaMedica.Name = "gridCasaMedica";
             this.gridCasaMedica.ReadOnly = true;
             this.gridCasaMedica.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridCasaMedica.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridCasaMedica.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.gridCasaMedica.RowHeadersWidth = 51;
             this.gridCasaMedica.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.gridCasaMedica.RowTemplate.Height = 24;
             this.gridCasaMedica.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridCasaMedica.Size = new System.Drawing.Size(496, 404);
             this.gridCasaMedica.TabIndex = 11;
+            // 
+            // btnAniadirPre
+            // 
+            this.btnAniadirPre.FlatAppearance.BorderSize = 0;
+            this.btnAniadirPre.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkKhaki;
+            this.btnAniadirPre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAniadirPre.Font = new System.Drawing.Font("MV Boli", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAniadirPre.ForeColor = System.Drawing.Color.White;
+            this.btnAniadirPre.Image = global::FarmaciaFatima.Properties.Resources.anadir;
+            this.btnAniadirPre.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAniadirPre.Location = new System.Drawing.Point(794, 143);
+            this.btnAniadirPre.Name = "btnAniadirPre";
+            this.btnAniadirPre.Size = new System.Drawing.Size(151, 51);
+            this.btnAniadirPre.TabIndex = 10;
+            this.btnAniadirPre.Text = "Añadir";
+            this.btnAniadirPre.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAniadirPre.UseVisualStyleBackColor = true;
+            this.btnAniadirPre.Click += new System.EventHandler(this.btnAniadirPre_Click);
+            // 
+            // btnAniadirCM
+            // 
+            this.btnAniadirCM.FlatAppearance.BorderSize = 0;
+            this.btnAniadirCM.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkKhaki;
+            this.btnAniadirCM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAniadirCM.Font = new System.Drawing.Font("MV Boli", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAniadirCM.ForeColor = System.Drawing.Color.White;
+            this.btnAniadirCM.Image = global::FarmaciaFatima.Properties.Resources.anadir;
+            this.btnAniadirCM.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAniadirCM.Location = new System.Drawing.Point(232, 143);
+            this.btnAniadirCM.Name = "btnAniadirCM";
+            this.btnAniadirCM.Size = new System.Drawing.Size(151, 51);
+            this.btnAniadirCM.TabIndex = 9;
+            this.btnAniadirCM.Text = "Añadir";
+            this.btnAniadirCM.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAniadirCM.UseVisualStyleBackColor = true;
+            this.btnAniadirCM.Click += new System.EventHandler(this.btnAniadirCM_Click);
             // 
             // label10
             // 
@@ -512,167 +702,256 @@ namespace FarmaciaFatima.Ventanas
             this.label5.TabIndex = 3;
             this.label5.Text = "Añadir Casa Medica";
             // 
-            // button1
+            // metroTabPage3
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(184)))), ((int)(((byte)(174)))));
-            this.button1.Image = global::FarmaciaFatima.Properties.Resources.menos;
-            this.button1.Location = new System.Drawing.Point(472, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(61, 50);
-            this.button1.TabIndex = 17;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.metroTabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(184)))), ((int)(((byte)(174)))));
+            this.metroTabPage3.Controls.Add(this.panel8);
+            this.metroTabPage3.Controls.Add(this.panel7);
+            this.metroTabPage3.HorizontalScrollbarBarColor = true;
+            this.metroTabPage3.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage3.HorizontalScrollbarSize = 10;
+            this.metroTabPage3.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage3.Name = "metroTabPage3";
+            this.metroTabPage3.Size = new System.Drawing.Size(1237, 645);
+            this.metroTabPage3.TabIndex = 2;
+            this.metroTabPage3.Text = "Editar Complementos";
+            this.metroTabPage3.VerticalScrollbarBarColor = true;
+            this.metroTabPage3.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage3.VerticalScrollbarSize = 10;
             // 
-            // btnBuscar
+            // panel8
             // 
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(184)))), ((int)(((byte)(174)))));
-            this.btnBuscar.Image = global::FarmaciaFatima.Properties.Resources.circulo_plus__1_;
-            this.btnBuscar.Location = new System.Drawing.Point(411, 0);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(55, 50);
-            this.btnBuscar.TabIndex = 13;
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            this.panel8.Controls.Add(this.gridProductos);
+            this.panel8.Controls.Add(this.panel9);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel8.Location = new System.Drawing.Point(390, 0);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(847, 645);
+            this.panel8.TabIndex = 3;
             // 
-            // btnAbrir
+            // gridProductos
             // 
-            this.btnAbrir.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnAbrir.FlatAppearance.BorderSize = 0;
-            this.btnAbrir.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.btnAbrir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAbrir.Font = new System.Drawing.Font("MV Boli", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAbrir.Image = global::FarmaciaFatima.Properties.Resources.abrir_caja;
-            this.btnAbrir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAbrir.Location = new System.Drawing.Point(22, 562);
-            this.btnAbrir.Name = "btnAbrir";
-            this.btnAbrir.Size = new System.Drawing.Size(354, 53);
-            this.btnAbrir.TabIndex = 13;
-            this.btnAbrir.Text = "Añadir Producto";
-            this.btnAbrir.UseVisualStyleBackColor = true;
-            this.btnAbrir.Click += new System.EventHandler(this.btnAbrir_Click);
+            this.gridProductos.AllowUserToAddRows = false;
+            this.gridProductos.AllowUserToDeleteRows = false;
+            this.gridProductos.AllowUserToOrderColumns = true;
+            this.gridProductos.AllowUserToResizeRows = false;
+            this.gridProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.gridProductos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(184)))), ((int)(((byte)(174)))));
+            this.gridProductos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gridProductos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.gridProductos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.gridProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridProductos.DefaultCellStyle = dataGridViewCellStyle8;
+            this.gridProductos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gridProductos.EnableHeadersVisualStyles = false;
+            this.gridProductos.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.gridProductos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.gridProductos.Location = new System.Drawing.Point(0, 82);
+            this.gridProductos.Name = "gridProductos";
+            this.gridProductos.ReadOnly = true;
+            this.gridProductos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridProductos.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.gridProductos.RowHeadersWidth = 51;
+            this.gridProductos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.gridProductos.RowTemplate.Height = 24;
+            this.gridProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gridProductos.Size = new System.Drawing.Size(847, 276);
+            this.gridProductos.TabIndex = 4;
+            this.gridProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridProductos_CellContentClick);
             // 
-            // btnAniadirPre
+            // panel9
             // 
-            this.btnAniadirPre.FlatAppearance.BorderSize = 0;
-            this.btnAniadirPre.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkKhaki;
-            this.btnAniadirPre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAniadirPre.Font = new System.Drawing.Font("MV Boli", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAniadirPre.ForeColor = System.Drawing.Color.White;
-            this.btnAniadirPre.Image = global::FarmaciaFatima.Properties.Resources.anadir;
-            this.btnAniadirPre.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAniadirPre.Location = new System.Drawing.Point(794, 143);
-            this.btnAniadirPre.Name = "btnAniadirPre";
-            this.btnAniadirPre.Size = new System.Drawing.Size(151, 51);
-            this.btnAniadirPre.TabIndex = 10;
-            this.btnAniadirPre.Text = "Añadir";
-            this.btnAniadirPre.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAniadirPre.UseVisualStyleBackColor = true;
-            this.btnAniadirPre.Click += new System.EventHandler(this.btnAniadirPre_Click);
+            this.panel9.Controls.Add(this.button4);
+            this.panel9.Controls.Add(this.textBox3);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel9.Location = new System.Drawing.Point(0, 0);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(847, 82);
+            this.panel9.TabIndex = 0;
             // 
-            // btnAniadirCM
+            // button4
             // 
-            this.btnAniadirCM.FlatAppearance.BorderSize = 0;
-            this.btnAniadirCM.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkKhaki;
-            this.btnAniadirCM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAniadirCM.Font = new System.Drawing.Font("MV Boli", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAniadirCM.ForeColor = System.Drawing.Color.White;
-            this.btnAniadirCM.Image = global::FarmaciaFatima.Properties.Resources.anadir;
-            this.btnAniadirCM.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAniadirCM.Location = new System.Drawing.Point(232, 143);
-            this.btnAniadirCM.Name = "btnAniadirCM";
-            this.btnAniadirCM.Size = new System.Drawing.Size(151, 51);
-            this.btnAniadirCM.TabIndex = 9;
-            this.btnAniadirCM.Text = "Añadir";
-            this.btnAniadirCM.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAniadirCM.UseVisualStyleBackColor = true;
-            this.btnAniadirCM.Click += new System.EventHandler(this.btnAniadirCM_Click);
+            this.button4.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.button4.Image = global::FarmaciaFatima.Properties.Resources.buscar__2_;
+            this.button4.Location = new System.Drawing.Point(683, 21);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(102, 50);
+            this.button4.TabIndex = 3;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // restaurar
+            // textBox3
             // 
-            this.restaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.restaurar.Image = global::FarmaciaFatima.Properties.Resources.restaurar;
-            this.restaurar.Location = new System.Drawing.Point(1167, 26);
-            this.restaurar.Name = "restaurar";
-            this.restaurar.Size = new System.Drawing.Size(30, 30);
-            this.restaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.restaurar.TabIndex = 5;
-            this.restaurar.TabStop = false;
-            this.restaurar.Visible = false;
-            this.restaurar.Click += new System.EventHandler(this.restaurar_Click);
+            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox3.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(62, 29);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(615, 38);
+            this.textBox3.TabIndex = 2;
+            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
             // 
-            // Minimizar
+            // panel7
             // 
-            this.Minimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Minimizar.Image = global::FarmaciaFatima.Properties.Resources.minimizar;
-            this.Minimizar.Location = new System.Drawing.Point(1131, 26);
-            this.Minimizar.Name = "Minimizar";
-            this.Minimizar.Size = new System.Drawing.Size(30, 30);
-            this.Minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Minimizar.TabIndex = 4;
-            this.Minimizar.TabStop = false;
-            this.Minimizar.Click += new System.EventHandler(this.Minimizar_Click);
+            this.panel7.Controls.Add(this.button3);
+            this.panel7.Controls.Add(this.label17);
+            this.panel7.Controls.Add(this.label16);
+            this.panel7.Controls.Add(this.label15);
+            this.panel7.Controls.Add(this.textBox2);
+            this.panel7.Controls.Add(this.label14);
+            this.panel7.Controls.Add(this.textBox1);
+            this.panel7.Controls.Add(this.cbxPresentacion2);
+            this.panel7.Controls.Add(this.button2);
+            this.panel7.Controls.Add(this.cbxCasaMedica2);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel7.Location = new System.Drawing.Point(0, 0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(390, 645);
+            this.panel7.TabIndex = 2;
             // 
-            // Maximizar
+            // button3
             // 
-            this.Maximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Maximizar.Image = global::FarmaciaFatima.Properties.Resources.maximizar;
-            this.Maximizar.Location = new System.Drawing.Point(1167, 26);
-            this.Maximizar.Name = "Maximizar";
-            this.Maximizar.Size = new System.Drawing.Size(30, 30);
-            this.Maximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Maximizar.TabIndex = 3;
-            this.Maximizar.TabStop = false;
-            this.Maximizar.Click += new System.EventHandler(this.Maximizar_Click);
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkKhaki;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("MV Boli", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Image = global::FarmaciaFatima.Properties.Resources.editar;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(8, 534);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(151, 51);
+            this.button3.TabIndex = 18;
+            this.button3.Text = "Editar";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // Salir
+            // label17
             // 
-            this.Salir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Salir.Image = global::FarmaciaFatima.Properties.Resources.cerrar;
-            this.Salir.Location = new System.Drawing.Point(1203, 26);
-            this.Salir.Name = "Salir";
-            this.Salir.Size = new System.Drawing.Size(30, 30);
-            this.Salir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Salir.TabIndex = 2;
-            this.Salir.TabStop = false;
-            this.Salir.Click += new System.EventHandler(this.Salir_Click);
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Lucida Sans Unicode", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(129, 364);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(131, 23);
+            this.label17.TabIndex = 17;
+            this.label17.Text = "Presentacion";
             // 
-            // label3
+            // label16
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Lucida Sans Unicode", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(18, 203);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(121, 23);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "Descripcion";
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Lucida Sans Unicode", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(145, 49);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(127, 23);
+            this.label16.TabIndex = 16;
+            this.label16.Text = "Casa Medica";
             // 
-            // richDescripcion
+            // label15
             // 
-            this.richDescripcion.Location = new System.Drawing.Point(22, 246);
-            this.richDescripcion.Name = "richDescripcion";
-            this.richDescripcion.Size = new System.Drawing.Size(314, 96);
-            this.richDescripcion.TabIndex = 15;
-            this.richDescripcion.Text = "";
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Lucida Sans Unicode", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(26, 449);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(85, 23);
+            this.label15.TabIndex = 14;
+            this.label15.Text = "Nombre";
             // 
-            // dateTimePicker1
+            // textBox2
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(22, 404);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 16;
+            this.textBox2.Font = new System.Drawing.Font("Lucida Sans Unicode", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(30, 475);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(314, 35);
+            this.textBox2.TabIndex = 15;
             // 
-            // label6
+            // label14
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Lucida Sans Unicode", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(24, 378);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(216, 23);
-            this.label6.TabIndex = 17;
-            this.label6.Text = "Fecha de Vencimiento";
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Lucida Sans Unicode", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(26, 134);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(85, 23);
+            this.label14.TabIndex = 12;
+            this.label14.Text = "Nombre";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Lucida Sans Unicode", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(30, 160);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(314, 35);
+            this.textBox1.TabIndex = 13;
+            // 
+            // cbxPresentacion2
+            // 
+            this.cbxPresentacion2.FormattingEnabled = true;
+            this.cbxPresentacion2.Location = new System.Drawing.Point(60, 402);
+            this.cbxPresentacion2.Name = "cbxPresentacion2";
+            this.cbxPresentacion2.Size = new System.Drawing.Size(284, 24);
+            this.cbxPresentacion2.TabIndex = 1;
+            // 
+            // button2
+            // 
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkKhaki;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("MV Boli", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = global::FarmaciaFatima.Properties.Resources.editar;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(6, 223);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(151, 51);
+            this.button2.TabIndex = 10;
+            this.button2.Text = "Editar";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // cbxCasaMedica2
+            // 
+            this.cbxCasaMedica2.FormattingEnabled = true;
+            this.cbxCasaMedica2.Location = new System.Drawing.Point(60, 75);
+            this.cbxCasaMedica2.Name = "cbxCasaMedica2";
+            this.cbxCasaMedica2.Size = new System.Drawing.Size(284, 24);
+            this.cbxCasaMedica2.TabIndex = 0;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(950, 52);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(127, 23);
+            this.button5.TabIndex = 6;
+            this.button5.Text = "Refrescar Datos";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // Bodega
             // 
@@ -687,6 +966,10 @@ namespace FarmaciaFatima.Ventanas
             this.Text = "Bodega";
             this.MenuTop.ResumeLayout(false);
             this.MenuTop.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.restaurar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Minimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Maximizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Salir)).EndInit();
             this.metroTabControl1.ResumeLayout(false);
             this.metroTabPage1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -701,10 +984,13 @@ namespace FarmaciaFatima.Ventanas
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridPresentacion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridCasaMedica)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.restaurar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Minimizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Maximizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Salir)).EndInit();
+            this.metroTabPage3.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridProductos)).EndInit();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -754,5 +1040,23 @@ namespace FarmaciaFatima.Ventanas
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private MetroFramework.Controls.MetroTabPage metroTabPage3;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.ComboBox cbxPresentacion2;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ComboBox cbxCasaMedica2;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox textBox3;
+        private MetroFramework.Controls.MetroGrid gridProductos;
+        private System.Windows.Forms.Button button5;
     }
 }

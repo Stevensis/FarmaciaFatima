@@ -21,3 +21,6 @@ C:\Users\Steven Sis\source\repos\FarmaciaFatima\FarmaciaFatima\bin\Debug\MetroFr
 C:\Users\Steven Sis\source\repos\FarmaciaFatima\FarmaciaFatima\obj\Debug\FarmaciaFatima.Ventanas.Bodega.resources
 C:\Users\Steven Sis\source\repos\FarmaciaFatima\FarmaciaFatima\obj\Debug\FarmaciaFatima.Ventanas.ReporteVentas.resources
 C:\Users\Steven Sis\source\repos\FarmaciaFatima\FarmaciaFatima\obj\Debug\FarmaciaFatima.Ventanas.DataBaseAdmin.resources
+C:\Users\Steven Sis\source\repos\FarmaciaFatima\FarmaciaFatima\obj\Debug\FarmaciaFatima.Ventanas.EditarProducto.resources
+C:\Users\Steven Sis\source\repos\FarmaciaFatima\FarmaciaFatima\obj\Debug\FarmaciaFatima.Ventanas.EditarProductoP.resources
+C:\Users\Steven Sis\source\repos\FarmaciaFatima\FarmaciaFatima\obj\Debug\FarmaciaFatima.Ventanas.VerProducto.resources

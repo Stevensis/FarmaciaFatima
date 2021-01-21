@@ -185,8 +185,7 @@ namespace FarmaciaFatima.Ventanas
 
         private void metroTabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            mostrarCombobox();
-            mostrarCombobox2();
+            
         }
 
         public void mostrarCombobox2()
@@ -199,6 +198,10 @@ namespace FarmaciaFatima.Ventanas
                 cbxCasaMedica.DataSource = tabla;
                 cbxCasaMedica.DisplayMember = "nombre";
                 cbxCasaMedica.ValueMember = "idCasaMedica";
+
+                cbxCasaMedica2.DataSource = tabla;
+                cbxCasaMedica2.DisplayMember = "nombre";
+                cbxCasaMedica2.ValueMember = "idCasaMedica";
             }
             else
             {
@@ -220,6 +223,10 @@ namespace FarmaciaFatima.Ventanas
                     cbx.cbx.DataSource = tabla2;
                     cbx.cbx.DisplayMember = "nombre";
                     cbx.cbx.ValueMember = "idPresentacion";
+
+                    cbxPresentacion2.DataSource = tabla2;
+                    cbxPresentacion2.DisplayMember = "nombre";
+                    cbxPresentacion2.ValueMember = "idPresentacion";
                 }
                 else
                 {
@@ -228,9 +235,6 @@ namespace FarmaciaFatima.Ventanas
 
             }
             
-            
-            
-
             GC.Collect();
         }
 
@@ -255,7 +259,8 @@ namespace FarmaciaFatima.Ventanas
             else
             {
                 txtPrecedenciaM.Enabled = false;
-                label11.Text = "Cantidad";
+                label11.Text = "Presentacion";
+                label12.Text = "Cantidad";
                 label6.Visible = false;
                 dateTimePicker1.Visible = false;
                 foreach (var pre in lstPresentaciones)
@@ -267,6 +272,10 @@ namespace FarmaciaFatima.Ventanas
 
         private void button1_Click(object sender, EventArgs e)
         {
+            quitarPresentacion();
+        }
+
+        public void quitarPresentacion() {
             if (lstPresentaciones.Count - 1 > 0)
             {
                 PresentacionObj ultimo = lstPresentaciones[lstPresentaciones.Count - 1];
@@ -283,6 +292,12 @@ namespace FarmaciaFatima.Ventanas
         private void btnAbrir_Click(object sender, EventArgs e)
         {
             string mostrar = aniadirProducto.anidiarProducto(txtNombreProducto.Text, richDescripcion.Text, cbxCasaMedica.SelectedValue.ToString(), lstPresentaciones, checkPresedencia.Checked, txtPrecedenciaM.Text, dateTimePicker1.Value.ToString("yyyy-MM-dd"));
+            if (mostrar.Equals("Producto Insertado"))
+            {
+                txtNombreProducto.Text = "";
+                richDescripcion.Text = "";
+                quitarPresentacion();
+            }
             MessageBox.Show(mostrar);
         }
 
@@ -306,6 +321,115 @@ namespace FarmaciaFatima.Ventanas
             {
                 e.Handled = true;
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Conexion conexion = new Conexion();
+            string sConsulta = "UPDATE casaMedica set nombre='"+textBox1.Text+"' WHERE idCasaMedia="+ cbxCasaMedica2.SelectedValue.ToString();
+            conexion.cargaMasiva(sConsulta);
+            textBox1.Text = "";
+            mostrarCombobox();
+            GC.Collect();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Conexion conexion = new Conexion();
+            string sConsulta = "UPDATE presentacion set Nombre='" + textBox1.Text + "' WHERE idPresentacion=" + cbxCasaMedica2.SelectedValue.ToString();
+            conexion.cargaMasiva(sConsulta);
+            textBox2.Text = "";
+            mostrarCombobox();
+            GC.Collect();
+        }
+
+        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((int)e.KeyChar == (int)Keys.Enter)
+            {
+                MostrarProductos();
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            MostrarProductos();
+        }
+
+        public void MostrarProductos() {
+            string consulta = "";
+            Conexion conexion = new Conexion();
+            if (textBox3.Text.Equals(""))
+            {
+                consulta = " (SELECT T.idBodega AS Codigo, P.nombre AS Producto, PR.nombre AS Presentacion, C.nombre AS Casa_Medica, T.precio AS Q_Precio, P.descripcion, T.cantidad AS Disponible, T.fechaCaducidad, T.tipo, C.nombre AS Representa, T.idProducto, T.idProducto AS Bo, T.idProducto AS Bo2 FROM bodega T "
+                                + " INNER JOIN producto P on(P.idProducto = T.idProducto) "
+                                + " INNER JOIN casaMedica C on(C.idCasaMedica = T.idCasaMedica)" +
+                                  " INNER JOIN presentacion PR ON (PR.IdPresentacion = T.idPresentacion) WHERE T.estado=1 )  " +
+                                  " UNION ALL " +
+                                  " ( SELECT B.IdBodega, PR.nombre, PS.nombre,C.nombre, PP.precio,PR.descripcion, (B.cantidad/PP.representacion) AS Cantidad, B.fechaCaducidad, B.tipo, STR(PP.representacion), B.idProducto, PP.idPresedenciaProducto, B.cantidad  from PresedenciaProducto PP " +
+                                  "  INNER JOIN bodega B ON(B.idBodega = PP.idBodega) "+
+                                  "  INNER JOIN presentacion PS ON(PS.idPresentacion = PP.idPresedencia) "+
+                                  "  INNER JOIN producto PR ON(PR.idProducto = B.idProducto) "+
+                                  "  INNER JOIN casaMedica C ON(C.idCasaMedica = B.idCasaMedica) WHERE B.estado=1 )";
+            }else {
+                consulta = "(SELECT T.idBodega AS Codigo, P.nombre AS Producto, PR.nombre AS Presentacion,C.nombre AS Casa_Medica, T.precio AS Q_Precio, P.descripcion, T.cantidad AS Disponible, T.fechaCaducidad, T.tipo, C.nombre AS Representa, T.idProducto, T.idProducto AS Bo, T.idProducto AS Bo2 FROM bodega T "
+                                + " INNER JOIN producto P on(P.idProducto = T.idProducto) "
+                                + " INNER JOIN casaMedica C on(C.idCasaMedica = T.idCasaMedica) " +
+                                " INNER JOIN presentacion PR ON (PR.IdPresentacion = T.idPresentacion) " +
+                                " WHERE (P.nombre Like '%" + textBox3.Text + "%' OR P.descripcion Like '%" + textBox3.Text + "%' ) AND T.estado=1  )  " +
+                                " UNION ALL " +
+                                  " ( SELECT B.IdBodega, PR.nombre, PS.nombre,C.nombre, PP.precio,PR.descripcion, (B.cantidad/PP.representacion), B.fechaCaducidad, B.tipo, STR(PP.representacion), B.idProducto, PP.idPresedenciaProducto, B.cantidad from PresedenciaProducto PP  " +
+                                  "  INNER JOIN bodega B ON(B.idBodega = PP.idBodega) " +
+                                  "  INNER JOIN presentacion PS ON(PS.idPresentacion = PP.idPresedencia) " +
+                                  "  INNER JOIN producto PR ON(PR.idProducto = B.idProducto) " +
+                                  "  INNER JOIN casaMedica C ON(C.idCasaMedica = B.idCasaMedica) " +
+                                  " WHERE (PR.nombre Like '%" + textBox3.Text + "%' OR PR.descripcion Like '%" + textBox3.Text + "%') AND  B.estado=1 ) ";
+            }
+            
+            DataTable tabla = conexion.retornaTabla(consulta);
+            if (tabla != null)
+            {
+                gridProductos.Columns.Clear();
+
+                DataGridViewButtonColumn btnAddDetails = new DataGridViewButtonColumn();
+                btnAddDetails.Text = "Editar";
+                btnAddDetails.UseColumnTextForButtonValue = true;
+                btnAddDetails.Name = "Editar";
+
+                gridProductos.Columns.Add(btnAddDetails);
+                gridProductos.DataSource = tabla;
+                gridProductos.Columns["tipo"].Visible = false;
+                gridProductos.Columns["Representa"].Visible = false;
+                gridProductos.Columns["idProducto"].Visible = false;
+                gridProductos.Columns["Bo"].Visible = false;
+                gridProductos.Columns["Bo2"].Visible = false;
+
+            }
+            else
+            {
+                MessageBox.Show("No se pudo mostrar las casas medicas");
+            }
+            GC.Collect();
+        }
+
+        private void gridProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (this.gridProductos.Columns.Count == 0 || this.gridProductos.Rows.Count == 0) { return; }
+            if (this.gridProductos.Columns[e.ColumnIndex].Name == "Editar")
+            {
+                    EditarProducto editarP = new EditarProducto();
+                    string detalleP = gridProductos.CurrentRow.Cells[2].Value.ToString() + " / " + gridProductos.CurrentRow.Cells[3].Value.ToString() +" / "+ gridProductos.CurrentRow.Cells[4].Value.ToString();
+                    editarP.Inicializador(gridProductos.CurrentRow.Cells[1].Value.ToString(),detalleP, gridProductos.CurrentRow.Cells[6].Value.ToString(), gridProductos.CurrentRow.Cells[7].Value.ToString(), gridProductos.CurrentRow.Cells[5].Value.ToString(), gridProductos.CurrentRow.Cells[8].Value.ToString(), gridProductos.CurrentRow.Cells[4].Value.ToString(), gridProductos.CurrentRow.Cells[9].Value.ToString(), gridProductos.CurrentRow.Cells[11].Value.ToString(), gridProductos.CurrentRow.Cells[12].Value.ToString(), gridProductos.CurrentRow.Cells[13].Value.ToString());
+                    editarP.Show();
+                    gridProductos.DataSource = null;
+                
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            mostrarCombobox();
+            mostrarCombobox2();
         }
     }
 }

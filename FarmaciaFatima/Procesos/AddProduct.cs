@@ -16,7 +16,7 @@ namespace FarmaciaFatima.Procesos
             if (nombre=="") { return "Nombre del producto vacio"; }
             //Verifica si el producto ya existe
             string sConsulta = "Select * FROM bodega B INNER JOIN producto P on (P.idProducto=B.idProducto)" +
-                                " Where B.idCasaMedica=" + casaMedica + " AND P.nombre='" + nombre + "'";
+                                " Where B.idCasaMedica=" + casaMedica + " AND P.nombre='" + nombre + "' AND B.estado=1";
 
             if (existeDato(sConsulta)) { return "Este Producto ya existe"; }
             //Si el producto no existe añade el producto
@@ -33,7 +33,7 @@ namespace FarmaciaFatima.Procesos
                     foreach (var presentacion in arreglo)
                     {
                         sConsulta = "INSERT INTO bodega VALUES " +
-                            " (" + presentacion.cbx.SelectedValue + "," + idProducto + "," + casaMedica + "," + presentacion.cantidad.Text + "," + presentacion.precio.Text + ",1,'" + presentacion.calendario.Value.ToString("yyyy-MM-dd") + "',2)";
+                            " (" + presentacion.cbx.SelectedValue + "," + idProducto + "," + casaMedica + "," + presentacion.cantidad.Text + "," + presentacion.precio.Text + ",1,'" + presentacion.calendario.Value.ToString("yyyy-MM-dd") + "',2,'foto.png')";
                         conexion.cargaMasiva(sConsulta);
                     }
 
@@ -49,7 +49,7 @@ namespace FarmaciaFatima.Procesos
                 try
                 {
                     sConsulta = "INSERT INTO bodega VALUES " +
-                            " (Null," + idProducto + "," + casaMedica + "," + cantidadM + ",Null,1,'" + fecha + "',1)";
+                            " (Null," + idProducto + "," + casaMedica + "," + cantidadM + ",Null,1,'" + fecha + "',1,'foto.png')";
                     conexion.cargaMasiva(sConsulta);
                     
                     string subConsulta = "Select * FROM bodega B INNER JOIN producto P on (P.idProducto=B.idProducto)" +
