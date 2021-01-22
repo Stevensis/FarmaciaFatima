@@ -163,6 +163,26 @@ namespace FarmaciaFatima.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap caja__1_ {
+            get {
+                object obj = ResourceManager.GetObject("caja (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap caja__2_ {
+            get {
+                object obj = ResourceManager.GetObject("caja (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap calculadora {
             get {
                 object obj = ResourceManager.GetObject("calculadora", resourceCulture);
@@ -246,6 +266,16 @@ namespace FarmaciaFatima.Properties {
         internal static System.Drawing.Bitmap hospital {
             get {
                 object obj = ResourceManager.GetObject("hospital", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconos_de_dinero {
+            get {
+                object obj = ResourceManager.GetObject("iconos-de-dinero", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

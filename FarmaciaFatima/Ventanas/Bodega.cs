@@ -19,11 +19,18 @@ namespace FarmaciaFatima.Ventanas
         int PosY = 52;
         AddProduct aniadirProducto;
         List<PresentacionObj> lstPresentaciones;
+
+        DataGridView form1 = null;
         public Bodega()
         {
             InitializeComponent();
             Inicializador();
         }
+
+        public void opt(DataGridView opt) {
+            this.form1=opt;
+        }
+
 
         public void Inicializador() {
             aniadirProducto = new AddProduct();
@@ -421,6 +428,7 @@ namespace FarmaciaFatima.Ventanas
                     string detalleP = gridProductos.CurrentRow.Cells[2].Value.ToString() + " / " + gridProductos.CurrentRow.Cells[3].Value.ToString() +" / "+ gridProductos.CurrentRow.Cells[4].Value.ToString();
                     editarP.Inicializador(gridProductos.CurrentRow.Cells[1].Value.ToString(),detalleP, gridProductos.CurrentRow.Cells[6].Value.ToString(), gridProductos.CurrentRow.Cells[7].Value.ToString(), gridProductos.CurrentRow.Cells[5].Value.ToString(), gridProductos.CurrentRow.Cells[8].Value.ToString(), gridProductos.CurrentRow.Cells[4].Value.ToString(), gridProductos.CurrentRow.Cells[9].Value.ToString(), gridProductos.CurrentRow.Cells[11].Value.ToString(), gridProductos.CurrentRow.Cells[12].Value.ToString(), gridProductos.CurrentRow.Cells[13].Value.ToString());
                     editarP.Show();
+                    editarP.removeD(this.form1);
                     gridProductos.DataSource = null;
                 
             }

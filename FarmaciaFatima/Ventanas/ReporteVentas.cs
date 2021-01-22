@@ -157,5 +157,25 @@ namespace FarmaciaFatima.Ventanas
             btnEliminarV.Visible = false;
             GC.Collect();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                createRInventario inventario = new createRInventario();
+                inventario.hacerReporte2(DateTime.Now.Date.ToString("yyyy-MM-dd"));
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("No se pudo generar el reporte de inventario");
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            createRCostos costos = new createRCostos();
+            costos.createReporte(DateTime.Now.Date.ToString("yyyy-MM-dd"));
+        }
     }
 }

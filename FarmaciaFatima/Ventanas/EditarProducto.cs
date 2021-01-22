@@ -13,7 +13,7 @@ namespace FarmaciaFatima.Ventanas
     public partial class EditarProducto : Form
     {
 
-        public string id="";
+        public string id = "";
         public string detalle = "";
         public string descripcion = "";
         public string cantidad = "";
@@ -24,6 +24,8 @@ namespace FarmaciaFatima.Ventanas
         public string idProducto = "";
         public string idPresedencia = "";
         public string cantidadCP = "";
+
+        DataGridView ew = null;
         public EditarProducto()
         {
             InitializeComponent();
@@ -54,14 +56,14 @@ namespace FarmaciaFatima.Ventanas
             try
             {
                 dateTimePicker1.Value = DateTime.Parse(fecha);
-                cbxCasaMedica.SelectedValue = retornaDato("SELECT * FROM casaMedica WHERE nombre='"+casaMedica+"'","idCasaMedica");
+                cbxCasaMedica.SelectedValue = retornaDato("SELECT * FROM casaMedica WHERE nombre='" + casaMedica + "'", "idCasaMedica");
             }
             catch (Exception)
             {
 
                 MessageBox.Show("No existe fecha en este producto");
             }
-            
+
         }
 
         private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
@@ -95,20 +97,32 @@ namespace FarmaciaFatima.Ventanas
             {
                 sConsulta = "UPDATE bodega SET cantidad=" + txtPrecedenciaM.Text + ", precio=" + textBox3.Text + " ,fechaCaducidad='" + dateTimePicker1.Value.ToString("yyyy-MM-dd") + "', idCasaMedica='" + cbxCasaMedica.SelectedValue.ToString() + "' WHERE idBodega=" + txtId.Text;
                 conexion.cargaMasiva(sConsulta);
-                sConsulta = "UPDATE producto SET descripcion='" + richDescripcion.Text  + "' WHERE idProducto=" + this.idProducto;
+                sConsulta = "UPDATE producto SET descripcion='" + richDescripcion.Text + "' WHERE idProducto=" + this.idProducto;
                 conexion.cargaMasiva(sConsulta);
             }
             else {
                 sConsulta = "UPDATE bodega SET cantidad=" + txtPrecedenciaM.Text + ",fechaCaducidad='" + dateTimePicker1.Value.ToString("yyyy-MM-dd") + "', idCasaMedica='" + cbxCasaMedica.SelectedValue.ToString() + "' WHERE idBodega=" + txtId.Text;
                 conexion.cargaMasiva(sConsulta);
-                sConsulta = "UPDATE PresedenciaProducto SET Precio=" + textBox3.Text +"   WHERE idPresedenciaProducto=" + this.idPresedencia;
+                sConsulta = "UPDATE PresedenciaProducto SET Precio=" + textBox3.Text + "   WHERE idPresedenciaProducto=" + this.idPresedencia;
                 conexion.cargaMasiva(sConsulta);
                 sConsulta = "UPDATE producto SET descripcion='" + richDescripcion.Text + "' WHERE idProducto=" + this.idProducto;
                 conexion.cargaMasiva(sConsulta);
             }
-            
+            try
+            {
+                ew.DataSource = null;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Actualice en la ventana principal");
+            }
+
             this.Close();
             GC.Collect();
+        }
+
+        public void removeD(DataGridView opt) {
+            ew = opt;
         }
 
         private void button2_Click(object sender, EventArgs e)

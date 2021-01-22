@@ -199,7 +199,7 @@ namespace FarmaciaFatima.Modelos
             if (chCambio.Checked == true)
             {
                 this.precio = newPrecio.Text;   
-                this.texto.Text = descripcionSinCambio +precio+"/ "+ descripcionP.Text;
+                this.texto.Text = descripcionSinCambio +precio+"/ Cambio Precio / "+ descripcionP.Text;
             }
             else
             {

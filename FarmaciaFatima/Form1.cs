@@ -135,6 +135,7 @@ namespace FarmaciaFatima
         {
             Bodega bodega = new Bodega();
             bodega.Show();
+            bodega.opt(gridProductos);
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -216,6 +217,11 @@ namespace FarmaciaFatima
                 if (this.gridProductos.Columns[e.ColumnIndex].Name == "Agregar")
                 {
                     if (float.Parse(gridProductos.CurrentRow.Cells[6].Value.ToString()) <= 0)
+                    {
+                        MessageBox.Show("No se puede vender un producto sin precio"); return;
+                    }
+
+                    if (float.Parse(gridProductos.CurrentRow.Cells[8].Value.ToString()) <= 0)
                     {
                         MessageBox.Show("No se puede vender un producto sin precio"); return;
                     }

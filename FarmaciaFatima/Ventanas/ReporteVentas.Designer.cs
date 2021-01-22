@@ -34,41 +34,45 @@ namespace FarmaciaFatima.Ventanas
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.MenuTop = new System.Windows.Forms.Panel();
-            this.restaurar = new System.Windows.Forms.PictureBox();
-            this.Minimizar = new System.Windows.Forms.PictureBox();
-            this.Maximizar = new System.Windows.Forms.PictureBox();
-            this.Salir = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.tabReportes = new MetroFramework.Controls.MetroTabPage();
-            this.btnVender = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
-            this.cbxVentas = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.gridVentas = new MetroFramework.Controls.MetroGrid();
             this.btnEliminarV = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.gridVentas = new MetroFramework.Controls.MetroGrid();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cbxVentas = new System.Windows.Forms.ComboBox();
+            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.label8 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnVender = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.restaurar = new System.Windows.Forms.PictureBox();
+            this.Minimizar = new System.Windows.Forms.PictureBox();
+            this.Maximizar = new System.Windows.Forms.PictureBox();
+            this.Salir = new System.Windows.Forms.PictureBox();
             this.MenuTop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.restaurar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Minimizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Maximizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Salir)).BeginInit();
             this.panel1.SuspendLayout();
             this.metroTabControl1.SuspendLayout();
             this.tabReportes.SuspendLayout();
             this.metroTabPage2.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridVentas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.restaurar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Minimizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Maximizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Salir)).BeginInit();
             this.SuspendLayout();
             // 
             // MenuTop
@@ -84,55 +88,6 @@ namespace FarmaciaFatima.Ventanas
             this.MenuTop.Name = "MenuTop";
             this.MenuTop.Size = new System.Drawing.Size(1213, 80);
             this.MenuTop.TabIndex = 2;
-            // 
-            // restaurar
-            // 
-            this.restaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.restaurar.Image = global::FarmaciaFatima.Properties.Resources.restaurar;
-            this.restaurar.Location = new System.Drawing.Point(1135, 26);
-            this.restaurar.Name = "restaurar";
-            this.restaurar.Size = new System.Drawing.Size(30, 30);
-            this.restaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.restaurar.TabIndex = 5;
-            this.restaurar.TabStop = false;
-            this.restaurar.Visible = false;
-            this.restaurar.Click += new System.EventHandler(this.restaurar_Click);
-            // 
-            // Minimizar
-            // 
-            this.Minimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Minimizar.Image = global::FarmaciaFatima.Properties.Resources.minimizar;
-            this.Minimizar.Location = new System.Drawing.Point(1099, 26);
-            this.Minimizar.Name = "Minimizar";
-            this.Minimizar.Size = new System.Drawing.Size(30, 30);
-            this.Minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Minimizar.TabIndex = 4;
-            this.Minimizar.TabStop = false;
-            this.Minimizar.Click += new System.EventHandler(this.Minimizar_Click);
-            // 
-            // Maximizar
-            // 
-            this.Maximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Maximizar.Image = global::FarmaciaFatima.Properties.Resources.maximizar;
-            this.Maximizar.Location = new System.Drawing.Point(1135, 26);
-            this.Maximizar.Name = "Maximizar";
-            this.Maximizar.Size = new System.Drawing.Size(30, 30);
-            this.Maximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Maximizar.TabIndex = 3;
-            this.Maximizar.TabStop = false;
-            this.Maximizar.Click += new System.EventHandler(this.Maximizar_Click);
-            // 
-            // Salir
-            // 
-            this.Salir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Salir.Image = global::FarmaciaFatima.Properties.Resources.cerrar;
-            this.Salir.Location = new System.Drawing.Point(1171, 26);
-            this.Salir.Name = "Salir";
-            this.Salir.Size = new System.Drawing.Size(30, 30);
-            this.Salir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Salir.TabIndex = 2;
-            this.Salir.TabStop = false;
-            this.Salir.Click += new System.EventHandler(this.Salir_Click);
             // 
             // label1
             // 
@@ -160,7 +115,7 @@ namespace FarmaciaFatima.Ventanas
             this.metroTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTabControl1.Location = new System.Drawing.Point(0, 0);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 1;
+            this.metroTabControl1.SelectedIndex = 0;
             this.metroTabControl1.Size = new System.Drawing.Size(1213, 501);
             this.metroTabControl1.TabIndex = 0;
             this.metroTabControl1.UseSelectable = true;
@@ -168,6 +123,10 @@ namespace FarmaciaFatima.Ventanas
             // 
             // tabReportes
             // 
+            this.tabReportes.Controls.Add(this.button3);
+            this.tabReportes.Controls.Add(this.label8);
+            this.tabReportes.Controls.Add(this.label7);
+            this.tabReportes.Controls.Add(this.button2);
             this.tabReportes.Controls.Add(this.btnVender);
             this.tabReportes.Controls.Add(this.label4);
             this.tabReportes.Controls.Add(this.label3);
@@ -186,21 +145,16 @@ namespace FarmaciaFatima.Ventanas
             this.tabReportes.VerticalScrollbarHighlightOnWheel = false;
             this.tabReportes.VerticalScrollbarSize = 10;
             // 
-            // btnVender
+            // label7
             // 
-            this.btnVender.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnVender.BackColor = System.Drawing.Color.White;
-            this.btnVender.FlatAppearance.BorderSize = 0;
-            this.btnVender.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.btnVender.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVender.Font = new System.Drawing.Font("MV Boli", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVender.Image = global::FarmaciaFatima.Properties.Resources.caja;
-            this.btnVender.Location = new System.Drawing.Point(313, 130);
-            this.btnVender.Name = "btnVender";
-            this.btnVender.Size = new System.Drawing.Size(113, 81);
-            this.btnVender.TabIndex = 7;
-            this.btnVender.UseVisualStyleBackColor = false;
-            this.btnVender.Click += new System.EventHandler(this.btnVender_Click);
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.White;
+            this.label7.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(459, 214);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(141, 23);
+            this.label7.TabIndex = 9;
+            this.label7.Text = "Sin existencia";
             // 
             // label4
             // 
@@ -224,20 +178,6 @@ namespace FarmaciaFatima.Ventanas
             this.label3.TabIndex = 5;
             this.label3.Text = "Reporte por dia especificado";
             // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnBuscar.BackColor = System.Drawing.Color.White;
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
-            this.btnBuscar.Image = global::FarmaciaFatima.Properties.Resources.buscar__2_;
-            this.btnBuscar.Location = new System.Drawing.Point(670, 28);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(102, 50);
-            this.btnBuscar.TabIndex = 4;
-            this.btnBuscar.UseVisualStyleBackColor = false;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -257,13 +197,6 @@ namespace FarmaciaFatima.Ventanas
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
             this.dateTimePicker1.TabIndex = 2;
-            // 
-            // bunifuDragControl1
-            // 
-            this.bunifuDragControl1.Fixed = true;
-            this.bunifuDragControl1.Horizontal = true;
-            this.bunifuDragControl1.TargetControl = this.MenuTop;
-            this.bunifuDragControl1.Vertical = true;
             // 
             // metroTabPage2
             // 
@@ -286,42 +219,26 @@ namespace FarmaciaFatima.Ventanas
             this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage2.VerticalScrollbarSize = 10;
             // 
-            // cbxVentas
+            // btnEliminarV
             // 
-            this.cbxVentas.BackColor = System.Drawing.Color.White;
-            this.cbxVentas.FormattingEnabled = true;
-            this.cbxVentas.Location = new System.Drawing.Point(409, 53);
-            this.cbxVentas.Name = "cbxVentas";
-            this.cbxVentas.Size = new System.Drawing.Size(314, 24);
-            this.cbxVentas.TabIndex = 9;
+            this.btnEliminarV.Location = new System.Drawing.Point(91, 54);
+            this.btnEliminarV.Name = "btnEliminarV";
+            this.btnEliminarV.Size = new System.Drawing.Size(116, 23);
+            this.btnEliminarV.TabIndex = 15;
+            this.btnEliminarV.Text = "Eliminar Venta";
+            this.btnEliminarV.UseVisualStyleBackColor = true;
+            this.btnEliminarV.Visible = false;
+            this.btnEliminarV.Click += new System.EventHandler(this.btnEliminarV_Click);
             // 
-            // label5
+            // button1
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.White;
-            this.label5.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(405, 27);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(195, 23);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Eliga Venta a editar";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.gridVentas);
-            this.panel2.Location = new System.Drawing.Point(50, 110);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1111, 297);
-            this.panel2.TabIndex = 11;
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.Location = new System.Drawing.Point(858, 42);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(144, 22);
-            this.txtPassword.TabIndex = 12;
+            this.button1.Location = new System.Drawing.Point(263, 54);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Buscar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label6
             // 
@@ -334,15 +251,22 @@ namespace FarmaciaFatima.Ventanas
             this.label6.TabIndex = 13;
             this.label6.Text = "Contraseña";
             // 
-            // button1
+            // txtPassword
             // 
-            this.button1.Location = new System.Drawing.Point(263, 54);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Buscar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.txtPassword.Location = new System.Drawing.Point(858, 42);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(144, 22);
+            this.txtPassword.TabIndex = 12;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.gridVentas);
+            this.panel2.Location = new System.Drawing.Point(50, 110);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1111, 297);
+            this.panel2.TabIndex = 11;
             // 
             // gridVentas
             // 
@@ -396,16 +320,154 @@ namespace FarmaciaFatima.Ventanas
             this.gridVentas.TabIndex = 0;
             this.gridVentas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridVentas_CellContentClick);
             // 
-            // btnEliminarV
+            // label5
             // 
-            this.btnEliminarV.Location = new System.Drawing.Point(91, 54);
-            this.btnEliminarV.Name = "btnEliminarV";
-            this.btnEliminarV.Size = new System.Drawing.Size(116, 23);
-            this.btnEliminarV.TabIndex = 15;
-            this.btnEliminarV.Text = "Eliminar Venta";
-            this.btnEliminarV.UseVisualStyleBackColor = true;
-            this.btnEliminarV.Visible = false;
-            this.btnEliminarV.Click += new System.EventHandler(this.btnEliminarV_Click);
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.White;
+            this.label5.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(405, 27);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(195, 23);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Eliga Venta a editar";
+            // 
+            // cbxVentas
+            // 
+            this.cbxVentas.BackColor = System.Drawing.Color.White;
+            this.cbxVentas.FormattingEnabled = true;
+            this.cbxVentas.Location = new System.Drawing.Point(409, 53);
+            this.cbxVentas.Name = "cbxVentas";
+            this.cbxVentas.Size = new System.Drawing.Size(314, 24);
+            this.cbxVentas.TabIndex = 9;
+            // 
+            // bunifuDragControl1
+            // 
+            this.bunifuDragControl1.Fixed = true;
+            this.bunifuDragControl1.Horizontal = true;
+            this.bunifuDragControl1.TargetControl = this.MenuTop;
+            this.bunifuDragControl1.Vertical = true;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.White;
+            this.label8.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(56, 355);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(303, 23);
+            this.label8.TabIndex = 10;
+            this.label8.Text = "Reporte de costo de inventario";
+            // 
+            // button3
+            // 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button3.BackColor = System.Drawing.Color.White;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("MV Boli", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Image = global::FarmaciaFatima.Properties.Resources.iconos_de_dinero;
+            this.button3.Location = new System.Drawing.Point(404, 355);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(113, 81);
+            this.button3.TabIndex = 11;
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("MV Boli", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Image = global::FarmaciaFatima.Properties.Resources.caja__2_;
+            this.button2.Location = new System.Drawing.Point(476, 130);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(113, 81);
+            this.button2.TabIndex = 8;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btnVender
+            // 
+            this.btnVender.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnVender.BackColor = System.Drawing.Color.White;
+            this.btnVender.FlatAppearance.BorderSize = 0;
+            this.btnVender.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btnVender.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVender.Font = new System.Drawing.Font("MV Boli", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVender.Image = global::FarmaciaFatima.Properties.Resources.caja;
+            this.btnVender.Location = new System.Drawing.Point(313, 130);
+            this.btnVender.Name = "btnVender";
+            this.btnVender.Size = new System.Drawing.Size(113, 81);
+            this.btnVender.TabIndex = 7;
+            this.btnVender.UseVisualStyleBackColor = false;
+            this.btnVender.Click += new System.EventHandler(this.btnVender_Click);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnBuscar.BackColor = System.Drawing.Color.White;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
+            this.btnBuscar.Image = global::FarmaciaFatima.Properties.Resources.buscar__2_;
+            this.btnBuscar.Location = new System.Drawing.Point(670, 28);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(102, 50);
+            this.btnBuscar.TabIndex = 4;
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // restaurar
+            // 
+            this.restaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.restaurar.Image = global::FarmaciaFatima.Properties.Resources.restaurar;
+            this.restaurar.Location = new System.Drawing.Point(1135, 26);
+            this.restaurar.Name = "restaurar";
+            this.restaurar.Size = new System.Drawing.Size(30, 30);
+            this.restaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.restaurar.TabIndex = 5;
+            this.restaurar.TabStop = false;
+            this.restaurar.Visible = false;
+            this.restaurar.Click += new System.EventHandler(this.restaurar_Click);
+            // 
+            // Minimizar
+            // 
+            this.Minimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Minimizar.Image = global::FarmaciaFatima.Properties.Resources.minimizar;
+            this.Minimizar.Location = new System.Drawing.Point(1099, 26);
+            this.Minimizar.Name = "Minimizar";
+            this.Minimizar.Size = new System.Drawing.Size(30, 30);
+            this.Minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Minimizar.TabIndex = 4;
+            this.Minimizar.TabStop = false;
+            this.Minimizar.Click += new System.EventHandler(this.Minimizar_Click);
+            // 
+            // Maximizar
+            // 
+            this.Maximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Maximizar.Image = global::FarmaciaFatima.Properties.Resources.maximizar;
+            this.Maximizar.Location = new System.Drawing.Point(1135, 26);
+            this.Maximizar.Name = "Maximizar";
+            this.Maximizar.Size = new System.Drawing.Size(30, 30);
+            this.Maximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Maximizar.TabIndex = 3;
+            this.Maximizar.TabStop = false;
+            this.Maximizar.Click += new System.EventHandler(this.Maximizar_Click);
+            // 
+            // Salir
+            // 
+            this.Salir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Salir.Image = global::FarmaciaFatima.Properties.Resources.cerrar;
+            this.Salir.Location = new System.Drawing.Point(1171, 26);
+            this.Salir.Name = "Salir";
+            this.Salir.Size = new System.Drawing.Size(30, 30);
+            this.Salir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Salir.TabIndex = 2;
+            this.Salir.TabStop = false;
+            this.Salir.Click += new System.EventHandler(this.Salir_Click);
             // 
             // ReporteVentas
             // 
@@ -420,10 +482,6 @@ namespace FarmaciaFatima.Ventanas
             this.Text = "ReporteVentas";
             this.MenuTop.ResumeLayout(false);
             this.MenuTop.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.restaurar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Minimizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Maximizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Salir)).EndInit();
             this.panel1.ResumeLayout(false);
             this.metroTabControl1.ResumeLayout(false);
             this.tabReportes.ResumeLayout(false);
@@ -432,6 +490,10 @@ namespace FarmaciaFatima.Ventanas
             this.metroTabPage2.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridVentas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.restaurar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Minimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Maximizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Salir)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -463,5 +525,9 @@ namespace FarmaciaFatima.Ventanas
         private System.Windows.Forms.Button button1;
         private MetroFramework.Controls.MetroGrid gridVentas;
         private System.Windows.Forms.Button btnEliminarV;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label8;
     }
 }
